@@ -13,6 +13,6 @@ export default class Recordatorio extends Component {
         ))}</ul>
 
         </div>
-    )
-  }  
-}
+    );
+  };  
+};
