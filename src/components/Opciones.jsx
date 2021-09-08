@@ -9,11 +9,11 @@ export default class Opciones extends Component {
         
         <div className="opciones">
          <div className= "opcion">
-         <button id="A" className="botones"  onClick={() => handleClick("a")}>A</button>
+         <button id="A" className="botones"  onClick={() => handleClick("A")}>A</button>
          <h2>{opcionA}</h2>
          </div>
          <div className= "opcion">
-         <button id="B" className="botones" onClick={() => handleClick("b")}>B</button>
+         <button id="B" className="botones" onClick={() => handleClick("B")}>B</button>
          <h2>{opcionB}</h2>
          </div>
         </div>

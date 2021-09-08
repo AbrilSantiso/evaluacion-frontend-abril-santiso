@@ -14,43 +14,44 @@ export default class Layout extends Component {
   componentWillMount(){
     this.setState({ contador: 0 });
   };
-
+  componentDidMount(){
+    Swal.fire({
+   
+    })
+  }
   handleClick = (opcion) =>{
+// Si ya llegamos al final, no actualizamos más el contador, ni el historial ni a seleccion previa
+   if(this.state.contador >=7){
+     alert("Fin!");
+   }else{
+   this.setState({seleccionPrevia: opcion});
 
-   this.setState({seleccionPrevia: opcion})
-
-   this.state.historial.push(opcion)
+   this.state.historial.push(opcion);
 
   this.actualizarContador(opcion);
-
-  }
+   };
+  };
   
   actualizarContador = (opcion) => {
 
     //Si la opcion es A
-    if(opcion == "a"){
-      if(this.state.seleccionPrevia == "a"){
-       this.setState({contador: this.state.contador + 2})
+    if(opcion == "A"){
+      if(this.state.seleccionPrevia == "A"){
+       this.setState({contador: this.state.contador + 2});
       }else{
-       this.setState({contador: this.state.contador + 1})
-      }
+       this.setState({contador: this.state.contador + 1});
+      };
 
     // Si la opcion es B
     }else{
-     if(this.state.seleccionPrevia == "a"){
-       this.setState({contador: this.state.contador + 3})
+     if(this.state.seleccionPrevia == "A"){
+       this.setState({contador: this.state.contador + 3});
     }else{
-     this.setState({contador: this.state.contador + 2})
-    }
-   }
-   // Si ya llegamos al final, no actualizamos más el contador, ni el historial ni a seleccion previa
-   if(this.state.contador == data.length - 1 ){
-     alert("Fin!")
-     this.setState({contador: data.length - 1})
-     this.setState({seleccionPrevia: this.state.seleccionPrevia})
-     this.setState({historial: this.state.historial.slice(0, data.length - 4 )})
-   }
-  }
+     this.setState({contador: this.state.contador + 2});
+    };
+   };
+   
+  };
 
   render (){
     return (
@@ -61,5 +62,5 @@ export default class Layout extends Component {
         </div>
     );
   };
-}
+};
 
