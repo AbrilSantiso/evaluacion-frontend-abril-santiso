@@ -1,10 +1,10 @@
 # Primer examen de Frontend
 
-Creado con [Create React App](https://github.com/facebook/create-react-app), por Abril Santiso, Camada 3.
+Creado con [Create React App](https://github.com/facebook/create-react-app) por Abril Santiso, Camada 3.
 
 ## Consigna
 
-Acá podes ver la [consigna del challenge] (https://github.com/Ivanszsctd-frontend3-primer-evaluacion)
+Acá podes ver la [consigna] del challenge (https://github.com/Ivanszsctd-frontend3-primer-evaluacion)
 
 ## Para correr el proyecto:
 
