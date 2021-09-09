@@ -1,6 +1,7 @@
 # Primer examen de Frontend
 
 Creado con [Create React App](https://github.com/facebook/create-react-app) por Abril Santiso, Camada 3.
+Podes ver el proyecto en acción [acá](https://codesandbox.io/s/evaluacion-frontend-abril-santiso-8xbpl).
 
 ## Consigna
 
