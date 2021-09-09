@@ -1,8 +1,7 @@
 import { Component } from "react";
 
 export default class Opciones extends Component {
-
-
+  
   render (){
     const { opcionA, opcionB, handleClick} = this.props;
     return (

@@ -2,6 +2,8 @@ import { Component } from "react";
 import data from "./data.json"
 import Opciones from "./Opciones";
 import Recordatorio from "./Recordatorio";
+import Swal from "sweetalert2";
+import "animate.css";
 
 export default class Layout extends Component {
 
@@ -14,21 +16,39 @@ export default class Layout extends Component {
   componentWillMount(){
     this.setState({ contador: 0 });
   };
+
   componentDidMount(){
     Swal.fire({
-   
-    })
-  }
+      title: 'Bienvenido a elige tu propia aventura!',
+      confirmButtonColor: "black",
+      showClass: {
+        popup: 'animate__animated animate__fadeInDown'
+      },
+      hideClass: {
+        popup: 'animate__animated animate__fadeOutUp'
+      }
+    });
+  };
   handleClick = (opcion) =>{
-// Si ya llegamos al final, no actualizamos más el contador, ni el historial ni a seleccion previa
+    
+// Si ya llegamos al final, no actualizamos más el contador, ni el historial ni la seleccion previa
    if(this.state.contador >=7){
-     alert("Fin!");
+    Swal.fire({
+      title: 'Llegaste al final!',
+      confirmButtonColor: "black",
+      showClass: {
+        popup: 'animate__animated animate__fadeInDown'
+      },
+      hideClass: {
+        popup: 'animate__animated animate__fadeOutUp'
+      }
+    });
    }else{
    this.setState({seleccionPrevia: opcion});
 
    this.state.historial.push(opcion);
 
-  this.actualizarContador(opcion);
+   this.actualizarContador(opcion);
    };
   };
   
@@ -50,7 +70,6 @@ export default class Layout extends Component {
      this.setState({contador: this.state.contador + 2});
     };
    };
-   
   };
 
   render (){
