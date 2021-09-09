@@ -4,7 +4,7 @@ Creado con [Create React App](https://github.com/facebook/create-react-app) por 
 
 ## Consigna
 
-Acá podes ver la [consigna] del challenge (https://github.com/Ivanszsctd-frontend3-primer-evaluacion)
+Acá podes ver la [consigna](https://github.com/Ivanszsctd-frontend3-primer-evaluacion) del challenge.
 
 ## Para correr el proyecto:
 
